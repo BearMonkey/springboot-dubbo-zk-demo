@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dubbo-consumer
+dubbo:
+  application:
+    name: ${spring.application.name}
+    qos-port: 33333
+  registry:
+    address: zookeeper://192.168.1.221:2181
+  protocol:
+    port: -1
+    name: dubbo
